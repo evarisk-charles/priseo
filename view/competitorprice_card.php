@@ -478,6 +478,17 @@ if ($object->id > 0) {
 							print $competitorPriceDetail->showOutputField($val, $key, $competitorPriceDetail->id, '');
 						} else {
 							print $competitorPriceDetail->showOutputField($val, $key, $competitorPriceDetail->$key, '');
+                            ?>
+                            <script>
+                                $(document).ready(function () {
+                                    $('.classfortooltip').each(function () {
+                                        $(this).removeAttr('href');
+                                        $(this).removeAttr('title');
+                                        $(this).css('text-decoration', 'none');
+                                    });
+                                });
+                            </script>
+                            <?php
 						}
 						print '</td>';
 
